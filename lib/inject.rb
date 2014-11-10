@@ -1,14 +1,16 @@
 class Array
 
   def itrinject(*args, &block)
-    tempvalue = self.first if args.first.is_a?(Symbol) || args.empty?
-    tempvalue = args.first if !args.first.is_a?(Symbol) && !args.first.nil? 
-    block = args.first.to_proc if args.first.is_a?(Symbol)
-    block = args[1].to_proc if args[1].is_a?(Symbol)
-    self.shift if args.first.is_a?(Symbol) || args.empty?
+    tempvalue = self[0] if args[0].is_a?(Symbol) || args.empty?
+    tempvalue = args[0] if !args[0].is_a?(Symbol) && !args[0].nil? 
+    args.map{ |arg| block = arg.to_proc if arg.is_a?(Symbol) }
+
+    self.shift if args[0].is_a?(Symbol) || args.empty?
+
     self.each { |n| tempvalue = block.call tempvalue, n }
     tempvalue
   end
+
 
 
   def recinject(initialvalue = nil, *args, &block)
