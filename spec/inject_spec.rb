@@ -26,6 +26,10 @@ describe "Array" do
       expect(arr.itrinject(2, :*)).to eq 240
     end
 
+    it "should compute division with intial value and symbol" do
+      expect([2, 2].itrinject(100, :/)).to eq 25
+    end
+
     it "should compute addition as a block" do
       expect(arr.itrinject {|sum, n| sum + n }).to eq 14
     end
