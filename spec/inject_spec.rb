@@ -48,21 +48,29 @@ describe "Array" do
       expect(ans).to eq "sheep"      
     end
 
+    it "should build a hash from nested arrays" do
+      expect([[:first_name, 'Shane'], [:last_name, 'Harvie']].itrinject({}) do |result, element|
+      result[element.first] = element.last
+      result
+      end).to eq ({:first_name=>"Shane", :last_name=>"Harvie"})
+    end
+
+
   end
 
   context "method Recursive Inject" do
 
-    it "should compute addition as symbol" do
-      expect(arr.recinject(:+)).to eq 14
-    end
+    # it "should compute addition as symbol" do
+    #   expect(arr.recinject(:+)).to eq 14
+    # end
 
-    it "should compute multiplication as symbol" do
-      expect(arr.recinject(:*)).to eq 120
-    end
+    # it "should compute multiplication as symbol" do
+    #   expect(arr.recinject(:*)).to eq 120
+    # end
 
-     it "should compute subtraction as symbol" do
-      expect(arr.recinject(:-)).to eq -10
-    end
+    # it "should compute subtraction as symbol" do
+    #   expect(arr.recinject(:-)).to eq -10
+    # end
 
     # it "should compute addition with intial value and symbol" do
     #   expect(arr.recinject(2, :+)).to eq 16
