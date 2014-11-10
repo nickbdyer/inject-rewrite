@@ -4,10 +4,9 @@ class Array
     tempvalue = self[0] if args[0].is_a?(Symbol) || args.empty?
     tempvalue = args[0] if !args[0].is_a?(Symbol) && !args[0].nil? 
     args.map{ |arg| block = arg.to_proc if arg.is_a?(Symbol) }
-
-    self.shift if args[0].is_a?(Symbol) || args.empty?
-
-    self.each { |n| tempvalue = block.call tempvalue, n }
+    arr = self
+    arr.shift if args[0].is_a?(Symbol) || args.empty?
+    arr.each { |n| tempvalue = block.call tempvalue, n }
     tempvalue
   end
 
