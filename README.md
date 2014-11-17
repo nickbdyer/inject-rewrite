@@ -7,5 +7,5 @@ This challenge demonstrates use of Ruby and Rspec.
 
 Tasks
 
-- [ ] Rewrite using Iterators
-- [ ] Rewrite using Recursion
+- [x] Rewrite using Iterators
+- [x] Rewrite using Recursion
