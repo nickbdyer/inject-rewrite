@@ -2,7 +2,7 @@ class Array
 
   def itrinject(*args, &block)
     arr = self.dup
-    tempvalue = self[0] if args[0].is_a?(Symbol) || args.empty?
+    tempvalue = arr[0] if args[0].is_a?(Symbol) || args.empty?
     tempvalue = args[0] if !args[0].is_a?(Symbol) && !args[0].nil? 
     args.map{ |arg| block = arg.to_proc if arg.is_a?(Symbol) }
     arr.shift if args[0].is_a?(Symbol) || args.empty?
