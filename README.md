@@ -1,6 +1,8 @@
 Inject-Rewrite
 ==============
 
+[![Code Climate](https://codeclimate.com/github/nickbdyer/inject-rewrite/badges/gpa.svg)](https://codeclimate.com/github/nickbdyer/inject-rewrite)
+
 Week 2 Challenge at Makers Academy
 
 This challenge demonstrates use of Ruby and Rspec.
