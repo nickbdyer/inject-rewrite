@@ -1,7 +1,7 @@
 Inject-Rewrite
 ==============
 
-[![Code Climate](https://codeclimate.com/github/nickbdyer/inject-rewrite/badges/gpa.svg)](https://codeclimate.com/github/nickbdyer/inject-rewrite)
+[![Code Climate](https://codeclimate.com/github/nickbdyer/inject-rewrite/badges/gpa.svg)](https://codeclimate.com/github/nickbdyer/inject-rewrite) [![Test Coverage](https://codeclimate.com/github/nickbdyer/inject-rewrite/badges/coverage.svg)](https://codeclimate.com/github/nickbdyer/inject-rewrite)
 
 Week 2 Challenge at Makers Academy
 
